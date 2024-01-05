@@ -62,7 +62,6 @@ def updateUsuarioDB(id: str, updated_usuario: UpdateUsuario):
             usuario.apellido=updated_usuario.apellido
             usuario.usuario=updated_usuario.usuario
             usuario.email=updated_usuario.email
-            usuario.password=updated_usuario.password
             db.commit()
             db.refresh(usuario)
             return usuario
